@@ -1,12 +1,8 @@
-import { isPropertyAccessChain } from "typescript";
+import { ContainerProps } from "./Types";
 
-type ContainerProps = {
-  style: React.CSSProperties;
-};
-
-export const Container = (props: ContainerProps) => {
+export const Container = ({ style }: ContainerProps) => {
   return (
-    <div style={props.style}>
+    <div style={style}>
       Lorem, ipsum dolor sit amet consectetur adipisicing elit.
     </div>
   );
