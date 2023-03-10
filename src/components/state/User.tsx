@@ -6,6 +6,10 @@ type AuthUser = {
 };
 
 export const User = () => {
+  // using Type assertion so that user is never null/only if certain that user will always be mounted soon after function is called
+  // const [user, setUser] = useState<AuthUser>({} as AuthUser);
+
+  // used for when uncertaint that mount will occur soon after function is called
   const [user, setUser] = useState<AuthUser | null>(null);
 
   const handleLogin = () => {
